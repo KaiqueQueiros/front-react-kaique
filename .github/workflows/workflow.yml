@@ -1,0 +1,50 @@
+name: Deploy React App to Azure
+
+# Executa o workflow quando houver push na branch main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Pegar o código do repositório
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2️⃣ Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # substitua pela versão do seu projeto
+
+      # 3️⃣ Instalar dependências do React
+      - name: Install dependencies
+        run: npm install
+
+      # 4️⃣ Criar build de produção do React
+      - name: Build React app
+        run: npm run build
+
+      # 5️⃣ Login no Azure usando Service Principal
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: |
+            {
+              "clientId": "${{ secrets.AZURE_APP_ID }}",
+              "clientSecret": "${{ secrets.AZURE_PASSWORD }}",
+              "subscriptionId": "${{ secrets.AZURE_SUBSCRIPTION_ID }}",
+              "tenantId": "${{ secrets.AZURE_TENANT_ID }}"
+            }
+
+      # 6️⃣ Deploy da build para o App Service
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          slot-name: 'production'
+          package: ./build

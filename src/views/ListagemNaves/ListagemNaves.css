@@ -1,0 +1,32 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botaoAdicionar {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background: #FFFFFF;
+  z-index: 999;
+  border-radius: 50px;
+}
+
+.toolbar {
+  background-image: linear-gradient(to bottom, #081c08, #298e2c);
+  color: "#FFFFFF";
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.typography {
+  flex-grow: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.legenda {
+  color: #FFFFFF;
+  text-align: right;
+  margin-right: 20px;
+  font-weight: bold;
+}
