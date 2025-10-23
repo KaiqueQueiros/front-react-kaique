@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf9f1560-0791-4a73-b956-4ba2b38b8781" name="Changes" comment="workflow.yml">
-      <change afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/workflow.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main_quack-front.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main_quack-front.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,7 @@
       <updated>1761101723011</updated>
       <workItem from="1761101724499" duration="343000" />
       <workItem from="1761175149659" duration="736000" />
-      <workItem from="1761185503821" duration="1543000" />
+      <workItem from="1761185503821" duration="2106000" />
     </task>
     <task id="LOCAL-00001" summary="wserwq">
       <option name="closed" value="true" />
@@ -132,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761176255635</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="workflow.yml">
+      <option name="closed" value="true" />
+      <created>1761187488974</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761187488974</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
